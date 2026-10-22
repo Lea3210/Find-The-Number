@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Injection By NetFree -->
+<script src="//wfapi.internal.netfree.link/wifree/go-install-wifree" type="text/javascript" async nonce="vhKkiIkAkS0qPshDvchrvA"></script>
+
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>דף הבית</title>
+
+<style>
+/* ... סגנונות מקוריים ... */
+body{
+    background:linear-gradient(to left,#4facfe,#00f2fe);
+}
+
+header{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    box-shadow:0 0 10px gray;
+}
+
+#userInfo{
+    font-size:22px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d4d;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:red;
+}
+
+h1{
+    text-align:center;
+    margin:30px;
+    color:white;
+    font-size:45px;
+}
+
+.games{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* עיצוב כרטיסים חדש מבוסס תמונות */
+.card{
+    height:180px;
+    background:white;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column; /* שינוי כיוון לסידור תמונה וטקסט */
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+    overflow: hidden; /* מבטיח שהתמונה תהיה בתוך הפינות המעוגלות */
+    position: relative; /* למיקום שכבת הטקסט */
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7); /* שכבת טקסט חצי שקופה לקריאות */
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div id="userInfo"></div>
+<button onclick="logout()">התנתק</button>
+</header>
+
+<h1>🎮 בחר משחק</h1>
+
+<div class="games">
+
+<!-- מצא את המספר -->
+<div class="card" onclick="location.href='game.html'">
+    <img src="1.gif" alt="מצא את המספר">
+    <h3 class="card-title">🔢 מצא את המספר</h3>
+</div>
+
+<!-- Fort Triumph -->
+<div class="card" onclick="comingSoon()">
+    <img src="2.gif" alt="Fort Triumph">
+    <h3 class="card-title">🎲 Fort Triumph</h3>
+</div>
+
+<!-- מריו קארט -->
+<div class="card" onclick="comingSoon()">
+    <img src="3.gif" alt="מריו קארט">
+    <h3 class="card-title">🧩 מריו קארט</h3>
+</div>
+
+<!-- עולם הפלטפורמות -->
+<div class="card" onclick="comingSoon()">
+    <img src="4.gif" alt="עולם הפלטפורמות">
+    <h3 class="card-title">🎯 עולם הפלטפורמות</h3>
+</div>
+
+<!-- סטודיו הצעצועים -->
+<div class="card" onclick="comingSoon()">
+    <img src="5.gif" alt="סטודיו הצעצועים">
+    <h3 class="card-title">🧠 סטודיו הצעצועים</h3>
+</div>
+
+<!-- מריו 64 בונוס -->
+<div class="card" onclick="comingSoon()">
+    <img src="6.gif" alt="מריו 64 בונוס">
+    <h3 class="card-title">⭐ מריו 64 (בונוס)</h3>
+</div>
+
+<!-- Toon Blast (פאזל) -->
+<div class="card" onclick="comingSoon()">
+    <img src="7.gif" alt="Toon Blast פאזל">
+    <h3 class="card-title">🎨 Toon Blast (פאזל)</h3>
+</div>
+
+<!-- מריו 64 -->
+<div class="card" onclick="comingSoon()">
+    <img src="8.png" alt="מריו 64">
+    <h3 class="card-title">🚀 מריו 64</h3>
+</div>
+
+<!-- משחק סודי (משתמש ברקע המופשט כרקע לכרטיס) -->
+<div class="card" onclick="comingSoon()" style="background-image: url('5895349.jpg'); background-size: cover;">
+    <h3 class="card-title">❓ משחק סודי</h3>
+</div>
+
+</div>
+
+<script src="home.js"></script>
+
+</body>
+</html>
